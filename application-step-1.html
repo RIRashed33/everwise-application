@@ -15,16 +15,109 @@
 <body>
     <div class="row g-0">
         <div class="col-md-auto navbar-expand-md">
-            <div class="company-sidebar collapse navbar-collapse" id="company_sidebar">
-                <div class="sidebar-logo">
-                    <img src="./img/logo.svg" alt="">
-                </div>
-                <div class="company-sidebar-content">
-
+            <div class="collapse navbar-collapse" id="main_sidebar">
+                <div class="company-sidebar">
+                    <div class="sidebar-top-content">
+                        <div class="sidebar-logo">
+                            <img src="./img/logo.svg" alt="">
+                        </div>
+                        <div class="navbar-top-box">
+                            <p>Jimbos Plumbing</p>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <ul>
+                                <li><a href="#"><span><img src="./img/icon/house-chimney.svg" alt="house_chimney"></span>Dashboard</a></li>
+                                <li class="has-children">
+                                    <a href="#"><span><img src="./img/icon/file-pen.svg" alt="file_pen"></span>Applications</a>
+                                    <ul>
+                                        <li><a href="#">PHI</a></li>
+                                        <li><a href="#">R&D Credits</a></li>
+                                        <li><a href="#">SETC</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><span><img src="./img/icon/circle-question.svg" alt="circle_question"></span>Help</a></li>
+                                <li><a href="#"><span><img src="./img/icon/gear.svg" alt="gear"></span>Account Settings</a></li>
+                            </ul>
+                        </nav>
+                        <div class="need-help-content">
+                            <div class="need-help-agent">
+                                <img src="./img/need-help.png" alt="">
+                                <div class="need-help-text">
+                                    <h6>Need help?</h6>
+                                    <p>Speak with your personal benefits agent</p>
+                                </div>
+                            </div>
+                            <a href="tel:(801) 269-6659">(801) 269-6659</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-bottom-content">
+                        <div class="user-interface">
+                            <div class="user-info">
+                                <img src="./img/profile-photo.png" alt="">
+                                <div class="user-title">
+                                    <h6>Michael J.</h6>
+                                    <p>Admin</p>
+                                </div>
+                            </div>
+                            <div class="log-out-button">
+                                <button>Log Out</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="col-md">
+            <header class="mobile-header-area d-md-none">
+                <div class="container">
+                    <div class="row g-0 align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <a href="#" class="mobile-logo">
+                                <img src="" alt="" class="white-logo">
+                                <img src="" alt="" class="black-logo">
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <button class="mobile-menu-toggler" data-bs-toggle="collapse" data-bs-target="#main_sidebar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="main-content-area">
+                <section class="main-content-top-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg">
+                                <div class="top-section-left">
+                                    <h2>Self Employment Tax Credit (SETC)</h2>
+                                    <p>All accounts are free. You pay nothing upfront and your information is secure.</p>
+                                    <div class="button-group">
+                                        <a href="#" class="watch-btn">Watch Intro</a>
+                                        <a href="#" class="key-btn">Watch Intro</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-auto">
+                                <div class="top-section-right">
+                                    <p>Application Status</p>
+                                    <span class="in-progress">In-progress</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
+            </main>
+        </div>
     </div>
+
+
+    <!-- Script File Link -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/custom.js"></script>
 </body>
 </html>
