@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="main_sidebar">
                 <div class="company-sidebar">
                     <div class="sidebar-top-content">
-                        <div class="sidebar-logo">
+                        <div class="sidebar-logo d-none d-md-block">
                             <img src="./img/logo.svg" alt="">
                         </div>
                         <div class="navbar-top-box">
@@ -27,7 +27,7 @@
                         <nav class="sidebar-nav">
                             <ul>
                                 <li><a href="#"><span><img src="./img/icon/house-chimney.svg" alt="house_chimney"></span>Dashboard</a></li>
-                                <li class="has-children">
+                                <li class="has-submenu">
                                     <a href="#"><span><img src="./img/icon/file-pen.svg" alt="file_pen"></span>Applications</a>
                                     <ul>
                                         <li><a href="#">PHI</a></li>
@@ -73,12 +73,12 @@
                     <div class="row g-0 align-items-center justify-content-between">
                         <div class="col-auto">
                             <a href="#" class="mobile-logo">
-                                <img src="" alt="" class="white-logo">
-                                <img src="" alt="" class="black-logo">
+                                <img src="./img/owl-logo-black.svg" alt="owl_logo" class="black-logo">
+                                <img src="./img/owl-logo-white.svg" alt="owl_logo" class="white-logo">
                             </a>
                         </div>
                         <div class="col-auto">
-                            <button class="mobile-menu-toggler" data-bs-toggle="collapse" data-bs-target="#main_sidebar">
+                            <button class="mobile-menu-toggler" data-bs-toggle="collapse" data-bs-target="#main_sidebar" id="hamburger_btn">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -117,6 +117,7 @@
 
 
     <!-- Script File Link -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/custom.js"></script>
 </body>

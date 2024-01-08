@@ -96,17 +96,49 @@ nav.sidebar-nav > ul > li > a {
     font-size: 14px;
     font-weight: 600;
     line-height: 24px;
-    width: 100%;
     padding: 3px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 nav.sidebar-nav > ul > li > a > span {
-    display: inline-block;
     width: 20px;
-    margin-right: 10px;
+    line-height: 1;
 }
-nav.sidebar-nav > ul > li > a > span > img {
+li.has-submenu > ul {
+    padding-left: 30px;
+    margin: 8px 0;
+    display: none;
+}
+li.has-submenu ul > li > a {
+    color: var(--white);
+    font-size: 14px;
+    padding: 5px 0;
+}
+nav.sidebar-nav > ul > li.has-submenu > a {
+    padding-right: 24px;
     position: relative;
-    top: -1.5px;
+}
+nav.sidebar-nav > ul > li.has-submenu > a::after, nav.sidebar-nav > ul > li.has-submenu > a::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 1px;
+    background-color: var(--white);
+    position: absolute;
+    top: 15px;
+    right: 0;
+    border-radius: 1px;
+    transition: all 0.4s;
+}
+nav.sidebar-nav > ul > li.has-submenu > a::after{
+    transform: rotate(-90deg);
+}
+nav.sidebar-nav > ul > li.has-submenu > a.active::after{
+    transform: rotate(0);
+}
+li.has-submenu ul > li > a:hover {
+    color: var(--salmon);
 }
 .need-help-agent, .user-info {
     display: flex;
@@ -145,6 +177,7 @@ nav.sidebar-nav > ul > li > a > span > img {
     display: flex;
     align-items: center;
     max-width: 220px;
+    margin: 0 auto;
     border-radius: 5px;
     border: 1px solid #23566E;
     padding: 8px 12px;
@@ -172,4 +205,7 @@ nav.sidebar-nav > ul > li > a > span > img {
     color: var(--white);
     font-size: 12px;
     padding: 2px;
+}
+a.mobile-logo img.white-logo {
+    display: none;
 }
