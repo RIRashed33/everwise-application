@@ -1,6 +1,9 @@
 @media screen and (max-width: 991px){
-    .company-sidebar {
+    .sitebar-area {
         width: 260px;
+    }
+    main.main-content-area{
+        width: calc(100% - 260px);
     }
     .top-section-right {
         text-align: start;
@@ -25,6 +28,12 @@
 
 }
 @media screen and (max-width: 767px){
+    .sitebar-area {
+        width: 0;
+    }
+    main.main-content-area{
+        width: 100%;
+    }
     .mobile-header-area {
         padding: 15px 0;
         position: relative;
