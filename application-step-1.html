@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/responsive.css">
 </head>
 <body>
-    <div class="row g-0">
+    <div class="row g-0 flex-md-nowrap">
         <div class="col-md-auto navbar-expand-md">
             <div class="collapse navbar-collapse" id="main_sidebar">
                 <div class="company-sidebar">
@@ -68,49 +68,165 @@
             </div>
         </div>
         <div class="col-md">
-            <header class="mobile-header-area d-md-none">
-                <div class="container">
-                    <div class="row g-0 align-items-center justify-content-between">
-                        <div class="col-auto">
-                            <a href="#" class="mobile-logo">
-                                <img src="./img/owl-logo-black.svg" alt="owl_logo" class="black-logo">
-                                <img src="./img/owl-logo-white.svg" alt="owl_logo" class="white-logo">
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <button class="mobile-menu-toggler" data-bs-toggle="collapse" data-bs-target="#main_sidebar" id="hamburger_btn">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </header>
             <main class="main-content-area">
                 <section class="main-content-top-section">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg">
-                                <div class="top-section-left">
-                                    <h2>Self Employment Tax Credit (SETC)</h2>
-                                    <p>All accounts are free. You pay nothing upfront and your information is secure.</p>
-                                    <div class="button-group">
-                                        <a href="#" class="watch-btn">Watch Intro</a>
-                                        <a href="#" class="key-btn">Watch Intro</a>
+                        <div class="mobile-header-area d-md-none">
+                            <div class="row g-0 align-items-center justify-content-between">
+                                <div class="col-auto">
+                                    <a href="#" class="mobile-logo">
+                                        <img src="./img/owl-logo-black.svg" alt="owl_logo" class="black-logo">
+                                        <img src="./img/owl-logo-white.svg" alt="owl_logo" class="white-logo">
+                                    </a>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="mobile-menu-toggler" data-bs-toggle="collapse" data-bs-target="#main_sidebar" id="hamburger_btn">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-section-content">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-lg">
+                                    <div class="top-section-left">
+                                        <h2>Self Employment Tax Credit (SETC)</h2>
+                                        <p>All accounts are free. You pay nothing upfront and your information is secure.</p>
+                                        <div class="button-group">
+                                            <a href="#" class="watch-btn">Watch Intro</a>
+                                            <a href="#" class="key-btn">Key Deadlines</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-auto">
+                                    <div class="top-section-right">
+                                        <p>Application Status</p>
+                                        <span class="in-progress">In-progress</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-auto">
-                                <div class="top-section-right">
-                                    <p>Application Status</p>
-                                    <span class="in-progress">In-progress</span>
-                                </div>
+                            <div class="account-info-links">
+                                <ul>
+                                    <li><a href="#" class="active">Application</a></li>
+                                    <li><a href="#">Upload your documents</a></li>
+                                    <li><a href="#">SOW / Agreements</a></li>
+                                    <li><a href="#">Review & Submit</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </section>
+                <section class="main-bottom-section">
+                    <div class="container">
+                        <div class="account-step-history">
+                            <div class="account-info-checkbox">
+                                <div class="single-checkbox completed">
+                                    <span class="tick-mark"></span>
+                                    <h6>Step 1</h6>
+                                    <p>Company Details</p>
+                                </div>
+                                <div class="single-checkbox">
+                                    <span class="empty-mark"></span>
+                                    <h6>Step 2</h6>
+                                    <p>Work History</p>
+                                </div>
+                                <div class="single-checkbox">
+                                    <span class="empty-mark"></span>
+                                    <h6>Step 3</h6>
+                                    <p>Net Income</p>
+                                </div>
+                                <div class="single-checkbox">
+                                    <span class="empty-mark"></span>
+                                    <h6>Step 3</h6>
+                                    <p>Registration Success</p>
+                                </div>
+                            </div>
+                            <button class="transparent-salmon-btn">Reset Application</button>
+                        </div>
 
+                        <div class="step-details">
+                            <h6>Step 1</h6>
+                            <h4>Company Details</h4>
+                            <p>Add a description or clarifying details for this step here.</p>
+                        </div>
+
+                        <div class="text-end py-3">
+                            <button class="transparent-salmon-btn">Clear all fields</button>
+                        </div>
+
+                        <form action="#">
+                            <div class="company-details-form-content">
+                                <div class="half-width-field">
+                                    <label for="">Owner First Name <span><img src="./img/icon/circle-question-gray.svg" alt=""></span></label>
+                                    <input type="text" name="" id="">
+                                </div>
+
+                                <div class="half-width-field">
+                                    <label for="">Owner Last Name</label>
+                                    <input type="text" name="" id="">
+                                </div>
+
+                                <div class="half-width-field">
+                                    <label for="">Owner First Name</label>
+                                    <input type="text" name="" id="">
+                                </div>
+
+                                <div class="half-width-field">
+                                    <label for="">Owner Last Name</label>
+                                    <input type="text" name="" id="">
+                                </div>
+
+                                <div class="full-width-field">
+                                    <label for="">Address</label>
+                                    <input type="text" name="" id="">
+                                </div>
+
+                                <div class="half-width-field">
+                                    <label for="">State</label>
+                                    <select name="" id="">
+                                        <option value="">Select state</option>
+                                        <option value="">Select state 2</option>
+                                        <option value="">Select state 3</option>
+                                        <option value="">Select state 4</option>
+                                    </select>
+                                </div>
+
+                                <div class="half-width-field">
+                                    <label for="">Zip code</label>
+                                    <input type="text" name="" id="">
+                                </div>
+
+                                <div class="full-width-field">
+                                    <p>Type of Business</p>
+                                    <div class="radio-btn-group">
+                                        <label class="radio-container">
+                                            <input type="radio"  name="example1">
+                                            <span class="checkmark"></span>
+                                            Partnership
+                                        </label>
+                                        <label class="radio-container">
+                                            <input type="radio" name="example1">
+                                            <span class="checkmark"></span>
+                                            Sole Proprietor
+                                        </label>
+                                        <label class="radio-container">
+                                            <input type="radio" name="example1">
+                                            <span class="checkmark"></span>
+                                            Corporation
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="full-width-field">
+                                    <div class="form-submit-btn">
+                                        <button type="submit" class="salmon-btn">Save & Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
             </main>
         </div>
     </div>

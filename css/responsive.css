@@ -2,10 +2,30 @@
     .company-sidebar {
         width: 260px;
     }
+    .top-section-right {
+        text-align: start;
+    }
+    .account-step-history {
+        flex-direction: column;
+        align-items: self-start;
+    }
+    .account-info-checkbox {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .single-checkbox {
+        width: calc(50% - 12px);
+        min-width: 120px;
+        padding-right: 0;
+        background: none;
+    }
+    .half-width-field {
+        width: 100%;
+    }
 
 }
 @media screen and (max-width: 767px){
-    header.mobile-header-area {
+    .mobile-header-area {
         padding: 15px 0;
         position: relative;
         z-index: 9;
@@ -62,6 +82,7 @@
         top: 0;
         left: 0;
         width: 100%;
+        z-index: 9;
     }
     .company-sidebar {
         width: 100%;
