@@ -457,20 +457,21 @@ span.custom-hr {
     outline: none;
     color: var(--granite-gray);
 }
-.radio-btn-group {
+.radio-btn-group, .checkbox-group {
     display: flex;
     align-items: center;
     gap: 18px;
     flex-wrap: wrap;
     margin-top: 8px;
 }
-.radio-btn-group label {
+.radio-btn-group label, .checkbox-group label {
+    align-items: center;
     font-size: 14px;
     line-height: 20px;
     display: inline-flex;
     gap: 8px;
 }
-.radio-container {
+.radio-container, .checkbox-container {
     display: inline-block;
     position: relative;
     width: 20px;
@@ -481,7 +482,7 @@ span.custom-hr {
     -ms-user-select: none;
     user-select: none;
 }
-.radio-container input, .radio-container .checkmark {
+.radio-container input, .radio-container .checkmark, .checkbox-container input, .checkbox-container .checkmark {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -491,17 +492,43 @@ span.custom-hr {
     cursor: pointer;
     transition: all 0.4s;
 }
-.radio-container .checkmark {
+.radio-container .checkmark, .checkbox-container .checkmark {
     opacity: 1;
     background-color: var(--white);
     border: 1px solid #cccccc;
     border-radius: 50%;
 }
-.radio-container:hover input ~ .checkmark {
+.radio-container:hover input ~ .checkmark, .checkbox-container:hover input ~ .checkmark {
     background-color: var(--flash-white);
 }
 .radio-container input:checked ~ .checkmark {
     border: 5px solid var(--salmon);
+}
+.checkbox-container .checkmark {
+    border-radius: 2px;
+}
+.checkbox-container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox-container .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 7px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.checkbox-container input:checked ~ .checkmark {
+    border-color: var(--salmon);
+    background-color: var(--salmon);
+}
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
 }
 .form-submit-btn {
     margin-top: 20px;
@@ -513,4 +540,29 @@ section.main-bottom-section {
 .work-history-form {
     max-width: 500px;
     margin: 0 auto;
+}
+.single-radio-box {
+    padding: 9% 15%;
+    border-radius: 5px;
+    border: 1px solid #CCCCCC;
+    transition: all 0.4s;
+    min-height: 100%;
+}
+.single-radio-box:hover {
+    border-color: var(--salmon);
+    box-shadow: 0 0 0 2px var(--salmon);
+}
+.single-radio-box h5 {
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+}
+.single-radio-box p {
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 10px 0;
+}
+.single-radio-box span.radio-container {
+    display: block;
 }

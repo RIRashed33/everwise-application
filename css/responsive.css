@@ -25,6 +25,9 @@
     .half-width-field {
         width: 100%;
     }
+    .three-over-field label {
+        width: 100%;
+    }
 
 }
 @media screen and (max-width: 767px){
