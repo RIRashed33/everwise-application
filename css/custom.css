@@ -464,12 +464,17 @@ span.custom-hr {
     flex-wrap: wrap;
     margin-top: 8px;
 }
-label.radio-container {
+.radio-btn-group label {
     font-size: 14px;
     line-height: 20px;
-    display: block;
+    display: inline-flex;
+    gap: 8px;
+}
+.radio-container {
+    display: inline-block;
     position: relative;
-    padding-left: 30px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -478,9 +483,9 @@ label.radio-container {
 }
 .radio-container input, .radio-container .checkmark {
     position: absolute;
-    opacity: 0;
     width: 20px;
     height: 20px;
+    opacity: 0;
     left: 0;
     top: 0;
     cursor: pointer;
