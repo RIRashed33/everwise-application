@@ -425,17 +425,32 @@ span.custom-hr {
 .full-width-field {
     width: 100%;
 }
+.three-over-field {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 12px;
+    row-gap: 15px;
+}
+.three-over-field label {
+    width: calc(33.33% - 8px);
+}
 .company-details-form label, .company-details-form p {
     display: block;
     font-size: 12px;
+    cursor: pointer;
     line-height: 2;
 }
+.company-details-form p {
+    margin-top: 10px;
+}
 .company-details-form input[type="text"], .company-details-form select {
+    display: block;
+    width: 100%;
     border-radius: 5px;
     border: 1px solid #DDD;
     background: var(--white);
     font-size: 16px;
-    width: 100%;
     line-height: 24px;
     padding: 12px 20px;
     height: 50px;
