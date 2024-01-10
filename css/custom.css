@@ -103,13 +103,12 @@ p {
 main.main-content-area{
     width: calc(100% - 300px);
     height: 100vh;
-    min-height: 620px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .company-sidebar {
     width: 100%;
     height: 100vh;
-    min-height: 620px;
+    overflow-y: auto;
     background-color: var(--dark-blue);
     padding: 25px 20px;
     display: flex;
@@ -341,7 +340,6 @@ span.in-progress::before {
 }
 .account-step-history {
     padding: 30px 0;
-    border-bottom: 1px solid #DDDDDD;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -402,7 +400,6 @@ span.empty-mark {
 }
 .step-details {
     padding: 36px 0;
-    border-bottom: 1px solid #DDDDDD;
 }
 .step-details h4 {
     margin-bottom: 8px;
@@ -410,13 +407,16 @@ span.empty-mark {
 .step-details p {
     font-size: 14px;
 }
-.company-details-form-content {
+.company-details-form {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     column-gap: 30px;
     row-gap: 15px;
     padding-bottom: 24px;
+}
+span.custom-hr {
+    display: block;
     border-bottom: 1px solid #DDDDDD;
 }
 .half-width-field {
@@ -425,12 +425,12 @@ span.empty-mark {
 .full-width-field {
     width: 100%;
 }
-.company-details-form-content label, .company-details-form-content p {
+.company-details-form label, .company-details-form p {
     display: block;
     font-size: 12px;
     line-height: 2;
 }
-.company-details-form-content input[type="text"], .company-details-form-content select {
+.company-details-form input[type="text"], .company-details-form select {
     border-radius: 5px;
     border: 1px solid #DDD;
     background: var(--white);
@@ -489,4 +489,8 @@ label.radio-container {
 }
 section.main-bottom-section {
     padding-bottom: 80px;
+}
+.work-history-form {
+    max-width: 500px;
+    margin: 0 auto;
 }
