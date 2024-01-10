@@ -60,7 +60,7 @@ p {
 .container {
     max-width: 1024px;
 }
-.transparent-salmon-btn, .salmon-btn {
+.transparent-salmon-btn, .salmon-btn, .upload-btn {
     border-radius: 5px;
     border: 1px solid var(--salmon);
     display: inline-block;
@@ -78,7 +78,7 @@ p {
     background-color: var(--salmon);
     color: var(--white);
 }
-.salmon-btn {
+.salmon-btn, .upload-btn {
     border: 1px solid var(--salmon);
     font-size: 16px;
     padding: 9px 20px;
@@ -87,9 +87,12 @@ p {
     min-width: 195px;
     color: var(--white);
 }
-.salmon-btn:hover{
+.salmon-btn:hover, .upload-btn:hover {
     color: var(--salmon);
     background-color: transparent;
+}
+.upload-btn{
+    min-width: 164px;
 }
 
 /* Sidebar Style */
@@ -565,4 +568,58 @@ section.main-bottom-section {
 }
 .single-radio-box span.radio-container {
     display: block;
+}
+.upload-docs-heading {
+    padding: 60px 0 16px;
+}
+.upload-docs-heading h4 {
+    margin-bottom: 12px;
+}
+.upload-docs-heading p {
+    font-size: 14px;
+}
+.single-upload-option {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.upload-direction h5 {
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+.upload-direction > p {
+    font-size: 14px;
+}
+.single-file {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.file-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+.file-name span.tick-mark {
+    background-color: #49BB3F;
+}
+button.remove-btn {
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    color: var(--salmon);
+    background: transparent;
 }
