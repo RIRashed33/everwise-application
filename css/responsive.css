@@ -28,7 +28,10 @@
     .three-over-field label {
         width: 100%;
     }
-
+    .agreements-box {
+        padding: 24px 30px;
+        min-height: 300px;
+    }
 }
 @media screen and (max-width: 767px){
     .sitebar-area {
