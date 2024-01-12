@@ -21,6 +21,7 @@ body {
 a {
     display: inline-block;
     text-decoration: none;
+    -webkit-transition: all 0.4s;
     transition: all 0.4s;
 }
 img {
@@ -68,6 +69,7 @@ p {
     border-radius: 5px;
     border: 1px solid var(--salmon);
     display: inline-block;
+    -webkit-transition: all 0.4s;
     transition: all 0.4s;
     font-size: 12px;
     line-height: 24px;
@@ -98,11 +100,14 @@ p {
 .upload-btn{
     min-width: 164px;
 }
-
 /* Sidebar Style */
 .body-divider {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: stretch;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
 }
 .sitebar-area {
     width: 300px;
@@ -118,8 +123,13 @@ main.main-content-area{
     overflow-y: auto;
     background-color: var(--dark-blue);
     padding: 25px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 24px;
 }
 .sidebar-logo {
@@ -147,13 +157,18 @@ nav.sidebar-nav > ul > li > a {
     font-weight: 600;
     line-height: 24px;
     padding: 3px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 10px;
 }
 nav.sidebar-nav > ul > li > a > span {
     width: 20px;
     line-height: 1;
+    font-size: 16px;
 }
 li.has-submenu > ul {
     padding-left: 30px;
@@ -169,7 +184,7 @@ nav.sidebar-nav > ul > li.has-submenu > a {
     padding-right: 24px;
     position: relative;
 }
-nav.sidebar-nav > ul > li.has-submenu > a::after, nav.sidebar-nav > ul > li.has-submenu > a::before {
+nav.sidebar-nav > ul > li.has-submenu > a:after, nav.sidebar-nav > ul > li.has-submenu > a:before {
     content: "";
     display: block;
     width: 10px;
@@ -179,21 +194,28 @@ nav.sidebar-nav > ul > li.has-submenu > a::after, nav.sidebar-nav > ul > li.has-
     top: 15px;
     right: 0;
     border-radius: 1px;
+    -webkit-transition: all 0.4s;
     transition: all 0.4s;
 }
-nav.sidebar-nav > ul > li.has-submenu > a::after{
-    transform: rotate(-90deg);
+nav.sidebar-nav > ul > li.has-submenu > a:after{
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
 }
-nav.sidebar-nav > ul > li.has-submenu > a.active::after{
-    transform: rotate(0);
+nav.sidebar-nav > ul > li.has-submenu > a.active:after{
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
 }
 li.has-submenu ul > li > a:hover {
     color: var(--salmon);
 }
 .need-help-agent, .user-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 16px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 14px;
 }
 .need-help-agent img {
@@ -224,14 +246,20 @@ li.has-submenu ul > li > a:hover {
     margin-top: auto;
 }
 .user-interface {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 220px;
     margin: 0 auto;
     border-radius: 5px;
     border: 1px solid #23566E;
     padding: 8px 12px;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .user-info {
     margin-bottom: 0;
@@ -259,7 +287,6 @@ li.has-submenu ul > li > a:hover {
 a.mobile-logo img.white-logo {
     display: none;
 }
-
 /* Content Area Style */
 section.main-content-top-section {
     background-color: var(--white);
@@ -274,8 +301,12 @@ section.main-content-top-section {
     margin-bottom: 24px;
 }
 .button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 40px;
 }
 a.watch-btn, a.key-btn {
@@ -283,15 +314,24 @@ a.watch-btn, a.key-btn {
     line-height: 24px;
     color: var(--granite-gray);
     padding-left: 26px;
-    background-position: center left;
-    background-repeat: no-repeat;
+    position: relative;
 }
-a.watch-btn{
-    background-image: url(../img/icon/camera.svg);
+a.watch-btn::before, a.key-btn::before {
+    content: "\f03d";
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 300;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
 }
-a.key-btn{
-    padding-left: 20px;
-    background-image: url(../img/icon/memo-pad.svg);
+a.key-btn {
+    padding-left: 22px;
+}
+a.key-btn::before {
+    content: "\e1da";
+}
+a.watch-btn:hover, a.key-btn:hover {
+    color: var(--salmon);
 }
 .top-section-right {
     text-align: center;
@@ -309,7 +349,7 @@ span.in-progress {
     border-radius: 5px;
     position: relative;
 }
-span.in-progress::before {
+span.in-progress:before {
     content: "";
     display: block;
     width: 10px;
@@ -345,46 +385,48 @@ span.in-progress::before {
     color: var(--salmon);
     border-color: var(--salmon);
 }
+.account-info-links ul li a:hover {
+    color: var(--salmon);
+}
 .account-step-history {
     padding: 30px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 24px;
 }
 .account-info-checkbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 24px;
     width: calc(100% - 185px);
 }
 .single-checkbox {
     padding-right: 10px;
-    background-image: url(../img/icon/angle-right-gray.svg);
-    background-repeat: no-repeat;
-    background-position: center right;
     width: calc(25% - 18px);
     max-width: 145px;
-}
-span.tick-mark {
-    display: block;
-    width: 25px;
-    height: 25px;
-    background-color: var(--salmon);
-    border-radius: 50%;
     position: relative;
 }
-span.tick-mark::after {
-    content: "";
-    display: block;
-    width: 12px;
-    height: 7px;
-    border-left: 2px solid var(--white);
-    border-bottom: 2px solid var(--white);
+.single-checkbox::after {
+    content: "\f105";
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 400;
+    line-height: 1;
+    font-size: 14px;
+    display: inline-block;
     position: absolute;
-    top: 8px;
-    left: 6px;
-    transform: rotate(-47deg);
+    right: 0;
+    top: calc(50% - 7px);
 }
 span.empty-mark {
     display: block;
@@ -392,18 +434,43 @@ span.empty-mark {
     height: 25px;
     border: 2px solid var(--spanish-gray);
     border-radius: 50%;
+    position: relative;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+span.empty-mark.checked {
+    background-color: var(--salmon);
+    border-color: var(--salmon);
+}
+span.empty-mark.checked:after {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 7px;
+    border-left: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    -webkit-transform: rotate(-47deg);
+    transform: rotate(-47deg);
 }
 .single-checkbox span {
     margin-bottom: 8px;
 }
-.single-checkbox h6, .single-checkbox p {
+.single-checkbox, .single-checkbox h6 {
     font-size: 12px;
     margin-bottom: 0;
     line-height: 1.33;
     color: var(--spanish-gray);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
 }
-.single-checkbox.completed h6, .single-checkbox.completed p {
+.single-checkbox.active, .single-checkbox.completed, .single-checkbox.active h6, .single-checkbox:hover, .single-checkbox:hover h6, .single-checkbox.completed h6, .single-checkbox.completed p {
     color: var(--salmon);
+}
+.single-checkbox.active span.empty-mark, .single-checkbox:hover span.empty-mark {
+    border-color: var(--salmon);
 }
 .step-details {
     padding: 36px 0;
@@ -415,10 +482,17 @@ span.empty-mark {
     font-size: 14px;
 }
 .company-details-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    column-gap: 30px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
     row-gap: 15px;
     padding-bottom: 24px;
 }
@@ -434,9 +508,14 @@ span.custom-hr {
 }
 .three-over-field {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    column-gap: 12px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 12px;
+       -moz-column-gap: 12px;
+            column-gap: 12px;
     row-gap: 15px;
 }
 .three-over-field label {
@@ -447,6 +526,11 @@ span.custom-hr {
     font-size: 12px;
     cursor: pointer;
     line-height: 2;
+}
+.company-details-form label span i {
+    display: inline-block;
+    font-size: 10px;
+    margin-left: 4px;
 }
 .company-details-form p {
     margin-top: 10px;
@@ -465,16 +549,25 @@ span.custom-hr {
     color: var(--granite-gray);
 }
 .radio-btn-group, .checkbox-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 18px;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-top: 8px;
 }
 .radio-btn-group label, .checkbox-group label {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 14px;
     line-height: 20px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     gap: 8px;
 }
@@ -497,6 +590,7 @@ span.custom-hr {
     left: 0;
     top: 0;
     cursor: pointer;
+    -webkit-transition: all 0.4s;
     transition: all 0.4s;
 }
 .radio-container .checkmark, .checkbox-container .checkmark {
@@ -527,7 +621,6 @@ span.custom-hr {
     border: solid white;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 .checkbox-container input:checked ~ .checkmark {
@@ -552,6 +645,7 @@ section.main-bottom-section {
     padding: 9% 15%;
     border-radius: 5px;
     border: 1px solid #CCCCCC;
+    -webkit-transition: all 0.4s;
     transition: all 0.4s;
     min-height: 100%;
 }
@@ -584,10 +678,17 @@ section.main-bottom-section {
 }
 .single-upload-option {
     padding: 40px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 24px;
 }
 .upload-direction h5 {
@@ -602,13 +703,21 @@ section.main-bottom-section {
 }
 .single-file {
     margin-top: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 20px;
 }
 .file-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 12px;
     padding: 12px 16px;
     border-radius: 5px;
@@ -617,8 +726,9 @@ section.main-bottom-section {
     font-weight: 600;
     color: var(--main-color);
 }
-.file-name span.tick-mark {
+.file-name span.empty-mark {
     background-color: #49BB3F;
+    border-color: #49BB3F;
 }
 button.remove-btn {
     border: none;
@@ -630,9 +740,15 @@ button.remove-btn {
 .agreements-box {
     padding: 24px 40px;
     min-height: 475px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border: 1px solid #DDDDDD;
 }
 .agreements-box-content {
@@ -642,4 +758,3 @@ button.remove-btn {
 .agreements-box-content h3 {
     margin: 20px 0 8px;
 }
-dhhhhhhhhhh
